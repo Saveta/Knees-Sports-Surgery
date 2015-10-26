@@ -8,6 +8,14 @@ body {
   background-color: #FAFCFD;
 }
 
+/*
+* row style to for left and right margin
+*/
+
+.row{
+	margin-left: 90px;
+	margin-right: 90px;
+}
 
 /*
  * Global add-ons
