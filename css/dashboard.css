@@ -30,12 +30,31 @@ body {
 	
 }
 
+.navbar {
+    position: relative;
+    min-height: 100px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+.border{
+	
+	
+}
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70,70,70,.25);
+  
+}
+
+.carousel-indicators .active {
+  background-color: #444;
+}
 /*
  * Top navigation
  * Hide default border to remove 1px line.
  */
 .navbar-fixed-top {
-  border: 0;
+  border: 3px;
 }
 
 /*
