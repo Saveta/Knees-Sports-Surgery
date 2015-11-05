@@ -9,165 +9,204 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js"></script>
 		<script>
-    function initialize() {
-    var mapProp = {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:9,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-    };
-     var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+		var myCenter=new google.maps.LatLng(51.511306, -0.119392);
+
+		function initialize()
+		{
+		var mapProp = {
+		  center:myCenter,
+		  zoom:5,
+		  mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+
+		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+		var marker=new google.maps.Marker({
+		  position:myCenter,
+		  });
+
+		marker.setMap(map);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
 		<link href="css/dashboard.css" rel="stylesheet">
 		<style type="text/css">
-		
+			body > div:first-child {
+				background-color: rgba(0, 185, 232, 1);
+			}
+			body > div:last-child {
+				background-color: #fff;
+				/*border-top: 5px solid rgba(0, 185, 232, 1);
+				border-bottom: 3px solid rgba(0, 185, 232, 1);*/
+				box-shadow: 0px 0px 10px 5px #62688D;
+				margin: 10px 0 20px;
+			}
+			.row{
+				/*background-color: #7fb213;*/
+				margin: auto 20%;
+			}
+			article{
+				padding: 10px;
+				margin: 10px;
+				box-shadow: 0px 0px 8px 3px #c2c2c2;
+			}
+			article > h4 {
+				padding-bottom: 9px;
+    			border-bottom: 1px solid #eee;
+			}
+			header > span {
+				line-height: 100px;
+			    font-size: 50px;
+			    font-family: serif;
+			    color: white;
+			}
+			.navbar {
+				min-height: 0px;
+				margin-bottom: 0px; 
+				border-radius: 4px 4px 0 0;
+				background-color: #E5E6F1;
+			}
+			.banner{
+				padding: 15px;
+				background-color: #E5E6F1;
+			}
+			.navbar-default .navbar-toggle {
+			  border-color: #563D7C;
+			}
+
+			.navbar-default .navbar-toggle:hover,
+			.navbar-default .navbar-toggle:focus {
+			  background-color: #563D7C;
+			}
 		</style>
 	</head>
-	<body>
-		
-      <div class="container-fluid">
-	  
-	  <div class="row" >
-        <nav class="navbar navbar-inverse">
-        <div class="navbar-header ">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Mabs</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">About Me</a></li>
-			<li><a href="#">Expertise</a></li>
-            <li><a href="#">Research & Academia</a></li>
-            <li><a href="#">Gallery</a></li>
-			<li><a href="">Testimonials</a></li>
-            <li><a href="">Contact Us</a></li>
-		</ul>          
-        </div>
-    
-    </nav>
-    
-			<div class="col-xs-12 col-md-12 main">
-        		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-					<li data-target="#myCarousel" data-slide-to="3"></li>
-					</ol>
-
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<img class="center-block" src="images/knee.png" alt="Chania"/>
-						</div>
-
-						<div class="item">
-							<img class="center-block" src="images/knee.png" alt="Chania"/>
-						</div>
-
-						<div class="item">
-							<img class="center-block" src="images/knee.png" alt="Flower"/>
-						</div>
-
-						<div class="item">
-							<img class="center-block" src="images/knee.png" alt="Flower"/>
-						</div>
+	<body>	
+		<div>
+			<div class="row">
+				<header>
+					<span>
+						<a href="home.html">Knee & Sports surgery</a>
+					</span>
+				</header>				
+				<nav class="navbar navbar-inverse">
+					<div class="navbar-header">
+      					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>                        
+      					</button>      
+    				</div>
+					<div id="myNavbar" class="collapse navbar-collapse">
+						<ul class="nav nav-justified">
+				            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+				            <li><a href="aboutMe.html">About Me</a></li>
+							<li><a href="#">Expertise</a></li>
+				            <li><a href="#">Research</a></li>
+				            <li><a href="gallery.html">Gallery</a></li>
+							<li><a href="testimonials.html">Testimonials</a></li>
+				            <li><a href="contact.html">Contact Us</a></li>
+						</ul>	
 					</div>
-
-					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-					</div>
-        	</div>
+				</nav>
 			</div>
-		<div class="container">
-        <div class="row" >
-  <div class="col-xs-12 col-sm-4 col-md-4 main " >
-  <h3 class="page-header text-info">About Me</h3>
-  <span class="text-muted">Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge,
+		</div>
+		<div>
+			<div class="row">
+				<div class="col-xs-12 col-md-12 banner">
+        			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+							<li data-target="#myCarousel" data-slide-to="3"></li>
+						</ol>
 
-Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University 
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<img class="center-block" src="images/knee.png" alt="Chania"/>
+							</div>
 
-College London, receiving a Goldsmith’s Guild Scholarship. </span></br></br>
-  <button type="button" class="btn btn-primary">Read More </button>
-  
-  
-  </div>
-  <div class="col-xs-12 col-sm-4 col-md-4 main" >
-  <h3 class="page-header text-info">Services</h3>
-  <span class="text-muted">Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge,
+							<div class="item">
+								<img class="center-block" src="images/knee.png" alt="Chania"/>
+							</div>
 
-Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University 
+							<div class="item">
+								<img class="center-block" src="images/knee.png" alt="Flower"/>
+							</div>
 
-College London, receiving a Goldsmith’s Guild Scholarship. </span></br></br>
-  <button type="button" class="btn btn-primary">Read More </button>
-  
-  
-  
-  
-  </div>
- 
-  <div class="col-xs-12 col-sm-4 col-md-4 main" >
-  <h3 class="page-header text-info">Testimonials</h3>
-  <span class="text-muted">Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge,
+							<div class="item">
+								<img class="center-block" src="images/knee.png" alt="Flower"/>
+							</div>
+						</div>
 
-Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University 
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4">
+					<article>
+						<h4 class="text-info">About Me</h4>
+						<span class="text-muted">Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.
+						</span>
+						</br></br>
+						<a class="btn btn-primary" role="button" href="aboutMe.html">Read More</a>
+					</article>					
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4">
+					<article>
+						<h4 class="text-info">About Me</h4>
+						<span class="text-muted">Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.
+						</span>
+						</br></br>
+						<a class="btn btn-primary" role="button" href="aboutMe.html">Read More</a>
+					</article>					
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4">
+					<article>
+						<h4 class="text-info">About Me</h4>
+						<span class="text-muted">Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.
+						</span>
+						</br></br>
+						<a class="btn btn-primary" role="button" href="aboutMe.html">Read More</a>
+					</article>					
+				</div>
+			</div>
+		</div>		
+		<div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-4">
+					<h3 class="page-header text-info">Gallery</h3>
+					<img  src="images/knee.png" alt="Chania" height="80" width="80"/> 
+					<img  src="images/knee.png" alt="Chania" height="80" width="80"/>
+					</br></br>
+					<a class="btn btn-primary" role="button" href="gallery.html">View More</a>
+				</div>
 
-College London, receiving a Goldsmith’s Guild Scholarship. </span></br></br>
-  <button type="button" class="btn btn-primary">Read More </button>
-  
-  
-  </div>
-  </div>
- 
-  <div class="row" >
-  
-  <div class="col-xs-12 col-sm-4 col-md-4 main" >
-  <h3 class="page-header text-info">Gallery</h3>
-  <img  src="images/knee.png" alt="Chania" height="80" width="80"/> 
-  <img  src="images/knee.png" alt="Chania" height="80" width="80"/>
-   </br></br>
-    <button type="button" class="btn btn-primary">View More </button>
-  </div>
-  
-  <div class="col-xs-12 col-sm-4 col-md-4 main" >
-  
-	<h3 class="page-header text-info">Contact Us</h3>
-	<address>500 Terry Francois Street
-San Francisco, CA 94158
-info@mysite.com</br>
-Tel: 123-456-7890</br>
-Toll Free 1800 000 0000
-Fax: 123-456-7890</address>
-  </div>
-	
-  <div class="col-xs-12 col-sm-4 col-md-4 main" >
-	<h3 class="page-header text-info">Find Us</h3>
-	<div id="googleMap" style="width:250px;height:120px;"></div>
-  </div>  
-</div>
-<div class="row" >
-	<div class="col-xs-12 col-sm-4 col-md-4  main">
-	<footer>
-		<p>Copyright &copy; 2015 <a href="www.bhrhospitals.nhs.uk">BHR Hospitals</a></p>
-	</footer>
-	</div>
-</div>
-</div>
-</div>
-  	</body>
+				<div class="col-xs-12 col-sm-12 col-md-4">
+					<h3 class="page-header text-info">Contact Us</h3>
+					<address>500 Terry Francois Street </br> San Francisco, CA 94158</br> info@mysite.com</br>Tel: 123-456-7890</br>Toll Free 1800 000 0000</br> Fax: 123-456-7890</address>
+				</div>
+
+				<div class="col-xs-12 col-sm-12 col-md-4" >
+					<h3 class="page-header text-info">Find Us</h3>
+					<div id="googleMap" style="width:100%;height:140px;"></div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<footer>
+						<p>Copyright &copy; 2015 <a href="http://www.bhrhospitals.nhs.uk" target="blank">BHR Hospitals</a></p>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
