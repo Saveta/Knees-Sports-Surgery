@@ -10,7 +10,6 @@
 		<script src="http://maps.googleapis.com/maps/api/js"></script>
 		<script>
 		var myCenter=new google.maps.LatLng(51.511306, -0.119392);
-
 		function initialize()
 		{
 		var mapProp = {
@@ -18,20 +17,19 @@
 		  zoom:5,
 		  mapTypeId:google.maps.MapTypeId.ROADMAP
 		  };
-
 		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
 		var marker=new google.maps.Marker({
 		  position:myCenter,
 		  });
-
 		marker.setMap(map);
 		}
-
 		google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
 		<link href="css/dashboard.css" rel="stylesheet">
 		<style type="text/css">
+			body{
+				background: #f8f8f8;
+			}
 			body > div:first-child {
 				background-color: rgba(0, 185, 232, 1);
 			}
@@ -50,34 +48,48 @@
 				padding: 10px;
 				margin: 10px;
 				box-shadow: 0px 0px 8px 3px #c2c2c2;
+				background: white;
 			}
 			article > h4 {
 				padding-bottom: 9px;
     			border-bottom: 1px solid #eee;
 			}
 			header > span {
-				line-height: 100px;
+				line-height: 120px;
 			    font-size: 50px;
-			    font-family: serif;
+			    font-family: aliceblue;
 			    color: white;
 			}
 			.navbar {
 				min-height: 0px;
 				margin-bottom: 0px; 
 				border-radius: 4px 4px 0 0;
-				background-color: #E5E6F1;
+				background-color: white;
 			}
 			.banner{
 				padding: 15px;
-				background-color: #E5E6F1;
+				background-color: white;
 			}
 			.navbar-default .navbar-toggle {
-			  border-color: #563D7C;
+			  border-color: #00008B;
 			}
-
 			.navbar-default .navbar-toggle:hover,
 			.navbar-default .navbar-toggle:focus {
-			  background-color: #563D7C;
+			  background-color: #00008B;
+			}
+			.navbar li a:hover {
+				/*background-color: #E5E6F1;*/
+				background-color: white;
+				font-size: 15px;
+				line-height: 20px;
+			}.navbar-toggle{
+				navbar
+			}
+			.carousel-inner{
+				background-color:white;
+			}
+			a:hover{
+				text-decoration: none;
 			}
 		</style>
 	</head>
@@ -86,7 +98,7 @@
 			<div class="row">
 				<header>
 					<span>
-						<a href="home.html">Knee & Sports surgery</a>
+						<a href="home.html">Knee & Sports Surgeon</a>
 					</span>
 				</header>				
 				<nav class="navbar navbar-inverse">
@@ -164,7 +176,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<article>
-						<h4 class="text-info">About Me</h4>
+						<h4 class="text-info">Expertise</h4>
 						<span class="text-muted">Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.
 						</span>
 						</br></br>
@@ -173,11 +185,11 @@
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<article>
-						<h4 class="text-info">About Me</h4>
+						<h4 class="text-info">Testimonials</h4>
 						<span class="text-muted">Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.
 						</span>
 						</br></br>
-						<a class="btn btn-primary" role="button" href="aboutMe.html">Read More</a>
+						<a class="btn btn-primary" role="button" href="testimonials.html">Read More</a>
 					</article>					
 				</div>
 			</div>
