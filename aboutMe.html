@@ -8,6 +8,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerwithlabel/src/markerwithlabel.js"></script>
+ 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
 		<script>
 		var myCenter=new google.maps.LatLng(51.511306, -0.119392);
 		function initialize()
@@ -16,40 +19,46 @@
 		  center:myCenter,
 		  zoom:5,
 		  mapTypeId:google.maps.MapTypeId.ROADMAP
-		  };
+		};
 		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 		var marker=new google.maps.Marker({
 		  position:myCenter,
-		  });
+		});
 		marker.setMap(map);
 		}
 		google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
+		<script>		
+    	$(function() {
+    	$.material.init();
+		});   	
+		</script>
 		<link href="css/dashboard.css" rel="stylesheet">
-		<style type="text/css">			
-		</style>
-	</head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css">
+		</head>
 	<body>
 		<div class="top_bar">
-	        	<div class="container">
-	            	<div class="row">
-	                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	                        <ul>
-	                            <li>Call&nbsp;&nbsp;<a href="tel:0207 323 0040">0207 323 0040 &nbsp; | </a></li>
-	                            <li><a href="#" class="modal_form">Book Appointment</a></li>
-	                        </ul>
-	                    </div>
+	        <div >
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12">
+	                    <ul>
+	                        <li>Call&nbsp;&nbsp;<a href="tel:0207 323 0040">020 3327 6350 &nbsp; | </a></li>
+	                        <li><a href="contact.html" class="modal_form">Book Appointment</a></li>
+	                    </ul>
 	                </div>
 	            </div>
+	        </div>
 	 	</div>	
-		<div style="background-color:white;">
-			<div class="row ">				
+		<div style="background-color:rgba(255,255,255,.84);">
+			<div class="row navbar-default">				
 				<header>
 					<span>
 						<a href="home.html">Knee Surgeon</a>
 					</span>
 				</header>								
-				<nav class="navbar navbar-inverse">
+				<nav class="navbar" style="background-color:transparent">
 					<div class="navbar-header">
       					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					        <span class="icon-bar"></span>
@@ -59,8 +68,8 @@
     				</div>
 					<div id="myNavbar" class="collapse navbar-collapse col-xs-12 col-sm-12 col-md-8">
 						<ul class="nav nav-justified">
-				            <li ><a href="home.html">Home <span class="sr-only">(current)</span></a></li>
-				            <li ><a href="aboutMe.html">About Me</a></li>
+				            <li><a href="home.html">Home <span class="sr-only">(current)</span></a></li>
+				            <li><a href="aboutMe.html">About Me</a></li>
 							<li><a href="#">Expertise</a></li>
 				            <li><a href="#">Research</a></li>
 				            <li><a href="gallery.html">Gallery</a></li>
@@ -75,21 +84,21 @@
 			<div class="row">
 				<div>
 					<article style="overflow: hidden;">
-						<h1 class="text-info text-center">Mr Alam </h1>
-					    </br>
+						<h2 class="text-center text-info">All that you should know </br> about Mr. Alam</h2>
+						</br></br>
 						<div class="col-lg-12 col-md-12 col-sm-12">
 						<p>Mr Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London.
 						</p>
-						<h2> Training </h2>
+						<h2 class="text-info"> Training </h2>
 						<p>	Mr Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London.
 						</p>
-						<h2>Practice</h2>
+						<h2 class="text-info">Practice</h2>
 						<p>Mr Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London, receiving a Goldsmith’s Guild Scholarship.Mr Mahbub (Mabs) Alam was appointed a Consultant in Trauma & Orthopaedic Surgery at Barking, Redbridge, Havering Hospitals NHS Trust in April 2014. He grew up in Bethnal Green and read Medicine at University College London.
 						</p>						
-					</div>
-					<div>
-						<img style="display:block;width:30%;height:10%;" class="img-thumbnail" src="images/Mabs.png" alt="Mabs" align="right"/>
-					</div>
+						</div>
+						<div>
+						<img style="display:block;width:30%;height:10%;" class="img-responsive center-block" src="images/Mabs.png" alt="Mabs" align="right"/>
+						</div>					
 					</article>																	
 				</div>
 			</div>
@@ -101,11 +110,12 @@
 					<img  src="images/knee.png" alt="Chania" height="80" width="80"/> 
 					<img  src="images/knee.png" alt="Chania" height="80" width="80"/>
 					</br></br>
-					<a class="btn btn-primary" role="button" href="gallery.html">View More</a>
+					<a class="btn btn-info" role="button" href="gallery.html">View More</a>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<h3 class="page-header text-info">Contact Us</h3>
-					<address>500 Terry Francois Street San Francisco, CA 94158 info@mysite.com</br>Tel: 123-456-7890</br>Toll Free 1800 000 0000 Fax: 123-456-7890</address>
+					<address>Emma Kaye</br>Tel: 020 3327 6350</br>emma@medicaladministration.co.uk
+					</address>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4" >
 					<h3 class="page-header text-info">Find Us</h3>
@@ -113,7 +123,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12">
 					<footer>
-						<span>Copyright &copy; 2015 <a href="http://www.bhrhospitals.nhs.uk">BHR Hospitals</span></p>
+						<span>Copyright &copy; Mr. Alam</a></span>
 					</footer>
 				</div>
 			</div>

@@ -8,6 +8,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerwithlabel/src/markerwithlabel.js"></script>
+ 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
 		<script>
 		var myCenter=new google.maps.LatLng(51.511306, -0.119392);
 
@@ -30,83 +33,37 @@
 
 		google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
+		<script>		
+    	$(function() {
+    	$.material.init();
+		});   	
+		</script>
 		<link href="css/dashboard.css" rel="stylesheet">
-		<style type="text/css">
-			body{
-				background: #f8f8f8;
-			}
-			body > div:first-child {
-				background-color: rgba(0, 185, 232, 1);
-			}
-			body > div:last-child {
-				background-color: #fff;
-				/*border-top: 5px solid rgba(0, 185, 232, 1);
-				border-bottom: 3px solid rgba(0, 185, 232, 1);*/
-				box-shadow: 0px 0px 10px 5px #62688D;
-				margin: 10px 0 20px;
-			}
-			.row{
-				/*background-color: #7fb213;*/
-				margin: auto 20%;
-			}
-			article{
-				padding: 10px;
-				margin: 10px;
-				box-shadow: 0px 0px 8px 3px #c2c2c2;
-				background: white;
-			}
-			article > h4 {
-				padding-bottom: 9px;
-    			border-bottom: 1px solid #eee;
-			}
-			header > span {
-				line-height: 120px;
-			    font-size: 40px;
-			    font-family: aliceblue;
-			    color: white;
-			}
-			.navbar {
-				min-height: 0px;
-				margin-bottom: 0px; 
-				border-radius: 4px 4px 0 0;
-				background-color: white;
-			}
-			.banner{
-				padding: 15px;
-				background-color: white;
-			}
-			.navbar-default .navbar-toggle {
-			  border-color: #00008B;
-			}
-			.navbar-default .navbar-toggle:hover,
-			.navbar-default .navbar-toggle:focus {
-			  background-color: #00008B;
-			}
-			.navbar li a:hover {
-				/*background-color: #E5E6F1;*/
-				background-color: white;
-				font-size: 15px;
-				line-height: 20px;
-			}.navbar-toggle{
-				navbar
-			}
-			.carousel-inner{
-				background-color:white;
-			}
-			a:hover{
-				text-decoration: none;
-			}
-		</style>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css">
 	</head>
 	<body>
-		<div>
-			<div class="row">
+		<div class="top_bar">
+	        <div >
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-12 col-md-12">
+	                    <ul>
+	                        <li>Call&nbsp;&nbsp;<a href="tel:0207 323 0040">020 3327 6350 &nbsp; | </a></li>
+	                        <li><a href="contact.html" class="modal_form">Book Appointment</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	 	</div>	
+		<div style="background-color:rgba(255,255,255,.84);">
+			<div class="row navbar-default">				
 				<header>
 					<span>
-						<a href="home.html">Knee & Sports Surgeon</a>
+						<a href="home.html">Knee Surgeon</a>
 					</span>
-				</header>				
-				<nav class="navbar navbar-inverse">
+				</header>								
+				<nav class="navbar" style="background-color:transparent">
 					<div class="navbar-header">
       					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					        <span class="icon-bar"></span>
@@ -114,15 +71,15 @@
 					        <span class="icon-bar"></span>                        
       					</button>      
     				</div>
-					<div id="myNavbar" class="collapse navbar-collapse">
+					<div id="myNavbar" class="collapse navbar-collapse col-xs-12 col-sm-12 col-md-8">
 						<ul class="nav nav-justified">
 				            <li><a href="home.html">Home <span class="sr-only">(current)</span></a></li>
 				            <li><a href="aboutMe.html">About Me</a></li>
 							<li><a href="#">Expertise</a></li>
 				            <li><a href="#">Research</a></li>
 				            <li><a href="gallery.html">Gallery</a></li>
-							<li class="active"><a href="testinmonials.html">Testimonials</a></li>
-				            <li><a href="contact.html">Contact Us</a></li>
+							<li><a href="testimonials.html">Testimonials</a></li>
+				            <li class="active"><a href="contact.html">Contact Us</a></li>
 						</ul>	
 					</div>
 				</nav>
@@ -145,12 +102,13 @@
 					<img  src="images/knee.png" alt="Chania" height="80" width="80"/> 
 					<img  src="images/knee.png" alt="Chania" height="80" width="80"/>
 					</br></br>
-					<a class="btn btn-primary" role="button" href="gallery.html">View More</a>
+					<a class="btn btn-info" role="button" href="gallery.html">View More</a>
 				</div>
 
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<h3 class="page-header text-info">Contact Us</h3>
-					<address>500 Terry Francois Street San Francisco, CA 94158 info@mysite.com</br>Tel: 123-456-7890</br>Toll Free 1800 000 0000 Fax: 123-456-7890</address>
+					<address>Emma Kaye</br>Tel: 020 3327 6350</br>emma@medicaladministration.co.uk
+					</address>
 				</div>
 
 				<div class="col-xs-12 col-sm-12 col-md-4" >
@@ -159,7 +117,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12">
 					<footer>
-						<p>Copyright &copy; 2015 <a href="http://www.bhrhospitals.nhs.uk">BHR Hospitals</a></p>
+						<span>Copyright &copy; Mr. Alam</a></span>
 					</footer>
 				</div>
 			</div>
