@@ -10,11 +10,11 @@
       }*/
       body > div:last-child {
         background-color: #fff;
-        box-shadow: 0px 0px 10px 5px #62688D;
+        /*box-shadow: 0px 0px 10px 5px #62688D;*/
         margin: 10px 0 20px;
       }
       .row{
-        margin: auto 15%;
+        margin: auto 12%;
       }
       span > a{
         color: #428bca;
@@ -32,14 +32,14 @@
       }
       article > span
       {
-          color: #9e9e9e;
-          font-family: "Arial", Helvetica, sans-serif;
-          font-size:14px;
-          margin: 0 0 40px 0;
-          line-height: 28px;
+        color: #9e9e9e;
+        font-family: "Arial", Helvetica, sans-serif;
+        font-size:14px;
+        margin: 0 0 40px 0;
+        line-height: 28px;
       }
       header{
-        height: 60px;
+        height: 50px;
       }      
       /*.navbar 
         background-color: transparent;
@@ -51,7 +51,13 @@
       .navbar-toggle {
         background-color: #428bca;
       }
-      
+      /*.carousel img {
+         
+        min-width: 100%;
+
+        
+      }
+      */
       /*.navbar li a:hover {
         background-color: white;
         font-size: 15px;
@@ -59,8 +65,10 @@
       }*/
       .carousel-inner{
         background-color:white;
+        height: 300px;
+        min-width: 100%;
       }
-      a:hover{
+      a:active{
         text-decoration: none;
       }
       .top_bar {          
@@ -68,16 +76,15 @@
           background: black;
           opacity: .90;
           color: #9e9e9e;
-          height: 50px;      
+          /*height: 40px; */     
       }
       .top_bar ul {
           float: right;          
           color: #fff;
-          font-size: 18px 
+          font-size: 15px 
       }
       .top_bar ul li {
           display: inline-block;
-          
       }
       .top_bar ul li span, .top_bar ul li a {
           color: #fff;
@@ -115,9 +122,9 @@
         .carousel-indicators .active {
           background-color: #444;
         }
-        p{
+        p, p>ul>li{
           display:block; 
-          padding 20px 20px; 
+          /*padding 20px 20px; */
           /*border: solid #efefef 1px; */
           /*box-shadow: 3px 3px 10px #0e0e0e;*/
           color: #9e9e9e;
@@ -126,10 +133,15 @@
           margin: 0 0 40px 0;
           line-height: 28px;
         }
+        /*p > li
+        {
+          color: #9e9e9e;
+          font-family: "Arial", Helvetica, sans-serif;
+        }*/
         address{
           display:block; 
-          padding 20px 20px; 
-          border: solid #efefef 1px; 
+          padding 10px 10px; 
+          /*border: solid #efefef 1px; */
           color: #9e9e9e;
           font-family: "Arial", Helvetica, sans-serif;
           font-size:14px;
@@ -142,7 +154,7 @@
         /*nav ul li a {
           text-decoration: none;
         }*/
-        /*.navbar-default
+        .navbar-default
         {
           background-color: white;
-        }*/
+        }

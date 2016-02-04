@@ -21,7 +21,6 @@
 		  zoom:5,
 		  mapTypeId:google.maps.MapTypeId.ROADMAP
 		  };
-
 		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 		var marker=new google.maps.Marker({
@@ -30,7 +29,6 @@
 
 		marker.setMap(map);
 		}
-
 		google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
 		<script>		
@@ -48,21 +46,21 @@
 	        <div >
 	            <div class="row">
 	                <div class="col-xs-12 col-sm-12 col-md-12">
-	                    <ul>
-	                        <li>Call&nbsp;&nbsp;<a href="tel:0207 323 0040">020 3327 6350 &nbsp; | </a></li>
-	                        <li><a href="contact.html" class="modal_form">Book Appointment</a></li>
+	                    <ul style="margin-top:10px">
+	                        <li>Call&nbsp;&nbsp;<a href="tel:0207 323 0040">020 3327 6350</a></li>	
+	                        <li><a href="contact.html" class="modal_form">Book Appointment</a></li>                        
 	                    </ul>
 	                </div>
 	            </div>
 	        </div>
 	 	</div>	
-		<div style="background-color:rgba(255,255,255,.84);">
-			<div class="row navbar-default">				
-				<header>
-					<span>
-						<a href="home.html">Knee Surgeon</a>
-					</span>
-				</header>								
+		<div style="background-color:white;">
+			<div class="row col-xs-2">				
+					<span style:"">
+						<a href="home.html"><img src="images/logo.png" height="100px"></img></a> 
+					</span>				
+			</div>
+			<div class="row navbar-default">												
 				<nav class="navbar" style="background-color:transparent">
 					<div class="navbar-header">
       					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -71,12 +69,13 @@
 					        <span class="icon-bar"></span>                        
       					</button>      
     				</div>
-					<div id="myNavbar" class="collapse navbar-collapse col-xs-12 col-sm-12 col-md-8">
+					<div id="myNavbar" class="collapse navbar-collapse col-xs-8 col-sm-8 col-md-8">
 						<ul class="nav nav-justified">
-				            <li><a href="home.html">Home <span class="sr-only">(current)</span></a></li>
+				            <!-- <li><img src="images/logo.png"/></li> -->
+				            <li><a href="home.html">Home</a></li>
 				            <li><a href="aboutMe.html">About Me</a></li>
-							<li><a href="#">Expertise</a></li>
-				            <li><a href="#">Research</a></li>
+							<li><a href="expertise.html">Expertise</a></li>
+				            <li><a href="research.html">Research</a></li>
 				            <li><a href="gallery.html">Gallery</a></li>
 							<li><a href="testimonials.html">Testimonials</a></li>
 				            <li class="active"><a href="contact.html">Contact Us</a></li>
