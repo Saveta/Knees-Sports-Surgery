@@ -113,12 +113,15 @@
         }
         
         } #menu {
-          text-align: center; }    
+          text-align: center; 
+        }    
           .fader {
           /* Giving equal sizes to each element */
           width:    250px;
           height:   170px;
-          
+          margin-left: 35px;
+          margin-top: 20px;
+          margin-bottom: 20px;
           /* Positioning elements in lines */
           display:  inline-block;
           
@@ -126,12 +129,14 @@
           position: relative;
           
           /* Preventing zoomed images to grow outside their elements */
-          overflow: hidden; }
+          overflow: hidden;
+        }
           .fader img {
             /* Stretching the images to fill whole elements */
             width:       100%;
             
             border:  grey;
+
         
             /* Preventing blank space below the image */
             line-height: 1;
@@ -145,29 +150,31 @@
     
           .fader img:hover {
                 /* Making images appear bigger and transparent on mouseover */
-                opacity: 0.5;
-                width:   105%;
-                 }
-                 .fader:hover .text {
-                z-index: 1;
+            opacity: 0.5;
+            width:   105%;
+        }
+          .fader:hover .text {
+            z-index: 1;
+            font-size: 20px;
+            color: black !important;
+            /*transition: color 1s ease;*/
+            -webkit-animation: mymove 8s;
+            animation :mymove 8s ;
             }    
           .fader .text {
             /* Placing text behind images */
-            z-index: -1;     
-            
+            z-index: -1;             
             /* Positioning text top-left conrner in the middle of elements */
             position: absolute;
-            top:      50%;
-            left:     50%; }
-        
-          .fader .text p {
-           /* Positioning text contents 50% left and top relative
-                   to text container's top left corner */
-            margin-top:  -50%; 
-            margin-left: -50%; 
-
-          }        
-        .borderHeader{
+             
+          } 
+          @-webkit-keyframes mymove {
+            0%   {top: 0px;}
+            25%  {font-size: 30px;}
+            75%  {top: 50px;font-size: 20px;}
+            100% {top: 100px;}
+          }       
+          .borderHeader{
           	border:  solid #888;
           	box-shadow: inset 0px 0px 0px #444, inset 0px 0px 0px #444;
          }        
