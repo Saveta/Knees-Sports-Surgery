@@ -1,5 +1,5 @@
 <!doctype HTML>
-<html>
+<html  lang="en">
 	<head>
 		<title>Mabs</title>
 		<meta charset="utf-8" />
@@ -12,7 +12,6 @@
  		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
  		<script type="text/javascript">
- 		var theForm=document.forms[0];
    		function initMap() {
 	    var latLng = new google.maps.LatLng(51.730189, 0.471305);
 	    var homeLatLng = new google.maps.LatLng(51.730189, 0.471305);
@@ -78,6 +77,12 @@
     	$(function() {
     	$.material.init();
 		}); 
+		function addActionTest(theForm) {
+			
+			if (theForm.subject.value != '') 
+				theForm.action += theForm.subject.value;
+				return true;
+			}
 		}  	
 	</script>
 	<link href="css/dashboard.css" rel="stylesheet">
@@ -91,7 +96,7 @@
 		<div class="top_bar">
 	        <div >
 	            <div class="row">
-	                <div class="col-xs-12 col-sm-12 col-md-12">
+	                <div>
 	                    <ul style="margin-top:10px">
 	                        <li>Call&nbsp;&nbsp;<a href="tel:0207 323 0040">020 3327 6350</a></li>	
 	                        <li><a href="contact.html" class="modal_form">Book Appointment</a></li>                        
@@ -154,7 +159,7 @@
 				</div>
 				</br>
 				<div >	
-			      	<form name="patientForm" action='mailto:saveta.kumari@aimia.com?subject=theForm.elements["subject"].value&body="Hi"' method="POST">
+			      	<form name="patientForm" action="mailto:saveta.kumari@aimia.com?subject=" method="POST" onsubmit="return addActionTest(this);">
 						<div class="form-group">
 							<input type="name" class="form-control" id="inputName" placeholder="Name">
 						</div>

@@ -151,15 +151,20 @@
           .fader img:hover {
                 /* Making images appear bigger and transparent on mouseover */
             opacity: 0.5;
-            width:   105%;
+            /*width:   105%;*/
+            -webkit-transform:scale(1.25); /* Safari and Chrome */
+            -moz-transform:scale(1.25); /* Firefox */
+            -ms-transform:scale(1.25); /* IE 9 */
+            -o-transform:scale(1.25); /* Opera */
+             transform:scale(1.25);            
         }
-          .fader:hover .text {
+        .fader:hover .text {
             z-index: 1;
             font-size: 20px;
             color: black !important;
             /*transition: color 1s ease;*/
             -webkit-animation: mymove 8s;
-            animation :mymove 8s ;
+            animation :mymove 8s infinite;
             }    
           .fader .text {
             /* Placing text behind images */
@@ -199,6 +204,7 @@
           margin: 0 0 40px 0;
           line-height: 28px;
         }
+       
         /*p > li
         {
           color: #9e9e9e;
